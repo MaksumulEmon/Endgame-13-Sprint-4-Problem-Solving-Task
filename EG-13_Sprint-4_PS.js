@@ -1,5 +1,6 @@
+// 01. Isomorphic Strings
 
-var isIsomorphic = function(s, t) {
+var isIsomorphic = function (s, t) {
     if (s.length !== t.length) {
         return false;
     }
@@ -26,4 +27,26 @@ var isIsomorphic = function(s, t) {
     return true;
 };
 
-console.log(isIsomorphic("egg", "add")); 
+console.log(isIsomorphic("egg", "add"));
+
+
+
+
+// 02. Word Pattern
+var wordPattern = function (pattern, s) {
+    let words = s.split(" ");
+    if (pattern.length !== words.length) return false;
+
+    let map = {};
+
+    for (let i = 0; i < pattern.length; i++) {
+        if (map[pattern[i]] && map[pattern[i]] !== words[i]) {
+            return false;
+        }
+        map[pattern[i]] = words[i];
+    }
+
+    return new Set(Object.values(map)).size === Object.keys(map).length;
+};
+
+console.log(wordPattern("abba", "dog cat cat dog"));
