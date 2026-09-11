@@ -69,3 +69,39 @@ var findTheDifference = function (s, t) {
 };
 
 console.log(findTheDifference("abcd", "abcde"));
+
+
+
+// 04. Reverse Linked List
+
+var reverseList = function (head) {
+    let prev = null;
+    let current = head;
+
+    while (current) {
+        let next = current.next;
+        current.next = prev;
+        prev = current;
+        current = next;
+    }
+
+    return prev;
+};
+
+// Create Linked List
+let head = { val: 1, next: null };
+head.next = { val: 2, next: null };
+head.next.next = { val: 3, next: null };
+head.next.next.next = { val: 4, next: null };
+head.next.next.next.next = { val: 5, next: null };
+
+let result = reverseList(head);
+
+// Print result
+let output = [];
+while (result) {
+    output.push(result.val);
+    result = result.next;
+}
+
+console.log(output);
