@@ -88,20 +88,40 @@ var reverseList = function (head) {
     return prev;
 };
 
-// Create Linked List
-let head = { val: 1, next: null };
-head.next = { val: 2, next: null };
-head.next.next = { val: 3, next: null };
-head.next.next.next = { val: 4, next: null };
-head.next.next.next.next = { val: 5, next: null };
+// 04. Reverse Linked List
 
-let result = reverseList(head);
+// let head = { val: 1, next: null };
+// head.next = { val: 2, next: null };
+// head.next.next = { val: 3, next: null };
+// head.next.next.next = { val: 4, next: null };
+// head.next.next.next.next = { val: 5, next: null };
 
-// Print result
-let output = [];
-while (result) {
-    output.push(result.val);
-    result = result.next;
-}
+// let result = reverseList(head);
 
-console.log(output);
+// // Print result
+// let output = [];
+// while (result) {
+//     output.push(result.val);
+//     result = result.next;
+// }
+
+// console.log(output);
+
+
+
+// 05. Middle of the Linked List
+var middleNode = function (head) {
+    let slow = 0;
+    let fast = 0;
+
+    while (fast < head.length - 1) {
+        slow++;
+        fast += 2;
+    }
+
+    return head.slice(slow);
+};
+
+let head = [1, 2, 3, 4, 5];
+
+console.log(middleNode(head));
