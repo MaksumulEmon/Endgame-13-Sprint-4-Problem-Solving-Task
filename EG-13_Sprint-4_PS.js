@@ -99,3 +99,26 @@ var middleNode = function (head) {
 let head = [1, 2, 3, 4, 5];
 
 console.log(middleNode(head));
+
+
+// 06. Product of Array Except Self
+
+var productExceptSelf = function(nums) {
+    let result = [];
+
+    for (let i = 0; i < nums.length; i++) {
+        let product = 1;
+
+        for (let j = 0; j < nums.length; j++) {
+            if (i !== j) {
+                product *= nums[j];
+            }
+        }
+
+        result.push(product);
+    }
+
+    return result;
+};
+
+console.log(productExceptSelf([1, 2, 3, 4]));
