@@ -125,7 +125,7 @@ console.log(productExceptSelf([1, 2, 3, 4]));
 
 
 
-// 08. Find First and Last Position of Element in Sorted Array
+// 07. Remove Nth Node From End of List
 
 var removeNthFromEnd = function (head, n) {
     let length = head.length;
@@ -137,3 +137,44 @@ var removeNthFromEnd = function (head, n) {
 };
 
 console.log(removeNthFromEnd([1, 2, 3, 4, 5], 2));
+
+
+
+// 08. Find First and Last Position of Element in Sorted Array
+
+var searchRange = function (nums, target) {
+    let start = -1;
+    let end = -1;
+
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] === target) {
+            if (start === -1) {
+                start = i;
+            }
+
+            end = i;
+        }
+    }
+
+    return [start, end];
+};
+
+console.log(searchRange([5, 7, 7, 8, 8, 10], 8));
+
+
+
+// 09. Permutation in String 
+
+// var checkInclusion = function (s1, s2) {
+//     for (let i = 0; i <= s2.length - s1.length; i++) {
+//         let part = s2.substring(i, i + s1.length);
+
+//         if (part.split('').sort().join('') === s1.split('').sort().join('')) {
+//             return true;
+//         }
+//     }
+
+//     return false;
+// };
+
+// console.log(checkInclusion("ab", "eidbaooo"));
