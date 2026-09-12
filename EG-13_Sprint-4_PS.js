@@ -27,7 +27,7 @@ var isIsomorphic = function (s, t) {
     return true;
 };
 
-console.log(isIsomorphic("egg", "add"));
+// console.log(isIsomorphic("egg", "add"));
 
 
 
@@ -49,7 +49,7 @@ var wordPattern = function (pattern, s) {
     return new Set(Object.values(map)).size === Object.keys(map).length;
 };
 
-console.log(wordPattern("abba", "dog cat cat dog"));
+// console.log(wordPattern("abba", "dog cat cat dog"));
 
 
 
@@ -68,7 +68,7 @@ var findTheDifference = function (s, t) {
     }
 };
 
-console.log(findTheDifference("abcd", "abcde"));
+// console.log(findTheDifference("abcd", "abcde"));
 
 
 // 04. Reverse Linked List
@@ -79,7 +79,7 @@ var reverseList = function (head) {
 
 let head1 = [1, 2, 3, 4, 5];
 
-console.log(reverseList(head1));
+// console.log(reverseList(head1));
 
 
 
@@ -96,9 +96,9 @@ var middleNode = function (head) {
     return head.slice(slow);
 };
 
-let head = [1, 2, 3, 4, 5];
+// let head = [1, 2, 3, 4, 5];
 
-console.log(middleNode(head));
+// console.log(middleNode(head));
 
 
 // 06. Product of Array Except Self
@@ -121,7 +121,7 @@ var productExceptSelf = function (nums) {
     return result;
 };
 
-console.log(productExceptSelf([1, 2, 3, 4]));
+// console.log(productExceptSelf([1, 2, 3, 4]));
 
 
 
@@ -136,7 +136,7 @@ var removeNthFromEnd = function (head, n) {
     return head;
 };
 
-console.log(removeNthFromEnd([1, 2, 3, 4, 5], 2));
+// console.log(removeNthFromEnd([1, 2, 3, 4, 5], 2));
 
 
 
@@ -159,7 +159,7 @@ var searchRange = function (nums, target) {
     return [start, end];
 };
 
-console.log(searchRange([5, 7, 7, 8, 8, 10], 8));
+// console.log(searchRange([5, 7, 7, 8, 8, 10], 8));
 
 
 
@@ -177,7 +177,7 @@ var checkInclusion = function (s1, s2) {
     return false;
 };
 
-console.log(checkInclusion("ab", "eidbaooo"));
+// console.log(checkInclusion("ab", "eidbaooo"));
 
 
 
@@ -198,4 +198,4 @@ var findAnagrams = function(s, p) {
     return result;
 };
 
-console.log(findAnagrams("cbaebabacd", "abc"));
+// console.log(findAnagrams("cbaebabacd", "abc"));
