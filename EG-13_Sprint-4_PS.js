@@ -103,7 +103,7 @@ console.log(middleNode(head));
 
 // 06. Product of Array Except Self
 
-var productExceptSelf = function(nums) {
+var productExceptSelf = function (nums) {
     let result = [];
 
     for (let i = 0; i < nums.length; i++) {
@@ -122,3 +122,18 @@ var productExceptSelf = function(nums) {
 };
 
 console.log(productExceptSelf([1, 2, 3, 4]));
+
+
+
+// 08. Find First and Last Position of Element in Sorted Array
+
+var removeNthFromEnd = function (head, n) {
+    let length = head.length;
+    let index = length - n;
+
+    head.splice(index, 1);
+
+    return head;
+};
+
+console.log(removeNthFromEnd([1, 2, 3, 4, 5], 2));
