@@ -178,3 +178,24 @@ var checkInclusion = function (s1, s2) {
 };
 
 console.log(checkInclusion("ab", "eidbaooo"));
+
+
+
+// 10. Find All Anagrams in a String 
+
+var findAnagrams = function(s, p) {
+    let result = [];
+    let sortedP = p.split('').sort().join('');
+
+    for (let i = 0; i <= s.length - p.length; i++) {
+        let part = s.substring(i, i + p.length);
+
+        if (part.split('').sort().join('') === sortedP) {
+            result.push(i);
+        }
+    }
+
+    return result;
+};
+
+console.log(findAnagrams("cbaebabacd", "abc"));
